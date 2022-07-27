@@ -3,7 +3,7 @@
 int main(){
     int n,m;
     char operator;
-    printf("Enter your 2 numbers on which operations are to be performed");  
+    printf("Enter your 2 numbers on which operations are to be performed in order\n");  
     scanf("%d %d",&n,&m);
     
     printf("Enter the operation to be performed which are  + ; - ; * ; / ");
@@ -11,6 +11,10 @@ int main(){
     switch (operator){
     case '+' :
             printf("%d",n+m);
+            break;
+    
+    case '-' :
+            printf("%d",n-m);
             break;
     default : 
             printf("Enter suitable operator");
