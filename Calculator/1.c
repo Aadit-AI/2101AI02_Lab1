@@ -6,7 +6,7 @@ int main(){
     printf("Enter your 2 numbers on which operations are to be performed in order\n");  
     scanf("%lf %lf",&n,&m);
     
-    printf("Enter the operation to be performed which are  '+' ; '-' ; '*' ; '/' \n");
+    printf("Enter the operation to be performed which are\n   '+' For Additon\n   '-' For Subtraction\n   '*' For Multiplication\n   '/' For Division\n");
     scanf(" %c", &operator);
     switch (operator){
     case '+' :
