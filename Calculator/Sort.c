@@ -10,7 +10,7 @@ int main()
         scanf(" %d",&arr[i]);
     }
 
-     printf("Which sorting method you want to use :\nPress 1 for insertion sort\n");
+     printf("Which sorting method you want to use :\nPress 1 for insertion sort\nPress 2 for bubble sort\n");
     scanf("%d",&method);
     switch(method){
     case 1:
@@ -29,6 +29,23 @@ int main()
     }
   } 
   break;
-   
+   case 2:
+   for(int i = 0 ; i < n - 1; i++) {
+     for(int j = 0 ; j < n-i-1; j++) {
+      if(arr[j] > arr[j+1]) {
+         element = arr[j];
+         arr[j] = arr[j+1];
+         arr[j+1] = element;
+       }
+    }
+}  
+   printf("\nBubble Sort Result is ");
+   for(int i = 0; i < n; i++) {
+    printf(" %d", arr[i]);
+    if (i!=n-1){
+        printf(",");
+    }
+  } 
+   break;
 }
-}
+ }
