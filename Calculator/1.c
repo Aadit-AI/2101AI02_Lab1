@@ -1,24 +1,28 @@
 #include <stdio.h>
 
 int main(){
-    int n,m;
+    double n,m;
     char operator;
     printf("Enter your 2 numbers on which operations are to be performed in order\n");  
-    scanf("%d %d",&n,&m);
+    scanf("%lf %lf",&n,&m);
     
-    printf("Enter the operation to be performed which are  + ; - ; * ; / ");
+    printf("Enter the operation to be performed which are  '+' ; '-' ; '*' ; '/' \n");
     scanf(" %c", &operator);
     switch (operator){
     case '+' :
-            printf("%d",n+m);
+            printf("%lf",n+m);
             break;
     
     case '-' :
-            printf("%d",n-m);
+            printf("%lf",n-m);
             break;
             
-    case '*':
-            printf("%d" ,n*m);
+    case '*' :
+            printf("%lf" ,n*m);
+            break;
+    
+    case '/' :
+            printf("%lf", n/m);
             break;
     default : 
             printf("Enter suitable operator");
