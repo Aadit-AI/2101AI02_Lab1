@@ -16,6 +16,10 @@ int main(){
     case '-' :
             printf("%d",n-m);
             break;
+            
+    case '*':
+            printf("%d" ,n*m);
+            break;
     default : 
             printf("Enter suitable operator");
     }
