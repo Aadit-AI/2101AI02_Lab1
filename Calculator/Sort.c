@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
  {
-    int n,method,element;
+    int n,method,element,position;
     printf("Please enter the number of numbers in the array you want to sort:- ");
     scanf("%d",&n);
     int arr[n];
@@ -10,7 +10,7 @@ int main()
         scanf(" %d",&arr[i]);
     }
 
-     printf("Which sorting method you want to use :\nPress 1 for insertion sort\nPress 2 for bubble sort\n");
+     printf("Which sorting method you want to use :\nPress 1 for insertion sort\nPress 2 for bubble sort\nPress 3 for selection sort\n");
     scanf("%d",&method);
     switch(method){
     case 1:
@@ -47,5 +47,25 @@ int main()
     }
   } 
    break;
-}
+   case 3:
+   for (int i = 0; i < (n- 1); i++) {
+   position = i;
+   for (int j = i + 1; j < n; j++) {
+    if (arr[position] > arr[j])
+      position = j;
+   }
+   if (position != i) {
+     element = arr[i];
+     arr[i] = arr[position];
+     arr[position] = element;
+   }
+ }
+ printf("Sorted list in ascending order is ");
+ for(int i = 0; i < n; i++) {
+    printf(" %d", arr[i]);
+    if (i!=n-1){
+        printf(",");
+    }
+  } break;
+ }
  }
